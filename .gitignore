@@ -1,2 +1,7 @@
 # ignore pycache
-__pycache__
+/__pycache__/
+app/__pycache__/
+
+# ignore all compiler cached files
+*.pyc
+
