@@ -50,4 +50,4 @@ if not globalapp.debug:
     globalapp.logger.setLevel(logging.INFO)
     globalapp.logger.info('Microblog startup')
 
-from app import routes, models, errors
+from app import routes, models, errors, tests
