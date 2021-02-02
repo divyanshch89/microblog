@@ -10,6 +10,8 @@ import logging
 from logging.handlers import SMTPHandler
 from logging.handlers import RotatingFileHandler
 import os
+from flask_mail import Mail
+from flask_bootstrap import Bootstrap
 
 globalapp = Flask(__name__)
 globalapp.config.from_object(Config)
@@ -18,6 +20,8 @@ db = SQLAlchemy(globalapp)
 login = LoginManager(globalapp)
 login.login_view = 'login'
 migrate = Migrate(globalapp, db)
+mail = Mail(globalapp)
+bootstrap = Bootstrap(globalapp)
 
 if not globalapp.debug:
     if globalapp.config['MAIL_SERVER']:
