@@ -5,3 +5,4 @@ app/__pycache__/
 # ignore all compiler cached files
 *.pyc
 
+.flaskenv
